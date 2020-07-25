@@ -17,11 +17,19 @@ class BooksApp extends React.Component {
     });
   }
 
+  moveShelf = (book, shelf) => {
+    BooksAPI.update(book, shelf);
+
+    BooksAPI.getAll().then((books) => {
+      this.setState({ books: books });
+    });
+  };
+
   render() {
     console.log(this.state.books);
     return (
       <div className="app">
-        <MainPage books={this.state.books} />
+        <MainPage books={this.state.books} moveShelf={this.moveShelf} />
       </div>
     );
   }
