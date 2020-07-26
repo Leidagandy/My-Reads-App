@@ -14,7 +14,7 @@
 //   "Ultimate", "Virtual Reality", "Web Development", "iOS";
 
 import React, { Component } from "react";
-import{ Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Book from "./Book";
 import * as BooksAPI from "./BooksAPI";
 
@@ -49,8 +49,7 @@ class SearchPage extends Component {
     return (
       <div className="search-books">
         <div className="search-books-bar">
-          <Link to ="/"
-          className="close-search">
+          <Link to="/" className="close-search">
             Close
           </Link>
           <div className="search-books-input-wrapper">
@@ -64,11 +63,23 @@ class SearchPage extends Component {
         </div>
         <div className="search-books-results">
           <ol className="books-grid">
-            {this.state.searchedBooks.map((searchedBook) => (
-              <li key={searchedBook.id}>
-                <Book book={searchedBook} moveShelf={this.props.moveShelf} />
-              </li>
-            ))}
+            {this.state.searchedBooks.map((searchedBook) => {
+              let shelf = "none";
+
+              this.props.books.map((book) =>
+                book.id === searchedBook.id ? (shelf = book.shelf) : " "
+              );
+
+              return (
+                <li key={searchedBook.id}>
+                  <Book
+                    book={searchedBook}
+                    moveShelf={this.props.moveShelf}
+                    currentShelf={shelf}
+                  />
+                </li>
+              );
+            })}
           </ol>
         </div>
       </div>
