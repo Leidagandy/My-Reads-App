@@ -1,14 +1,12 @@
-## MyReads
+## MyReads : A Book Catalogue App
 
-Made with React and React Router
-
-MyReads is a book catalogue app that allows the user to search for books and place them in one of three shelves or categories:
+Made with React and React Router, MyReads allows you to select books and place them in one of three shelves or categories:
 
     - Currently Reading
     - Want to Read
     - Read
 
-It allows users to search for books based on the following titles and authors:
+You can search for books based on the following titles and authors:
 
 "Android", "Art", "Artificial Intelligence", "Astronomy", "Austen",
 "Baseball", "Basketball", "Bhagat", "Biography", "Brief", "Business",
@@ -20,11 +18,11 @@ It allows users to search for books based on the following titles and authors:
 "React", "Redux", "River", "Robotics", "Rowling",
 "Satire", "Science Fiction", "Shakespeare", "Singh", "Swimming", "Tale", "Thrun", "Time", "Tolstoy", "Travel","Ultimate", "Virtual Reality", "Web Development", "iOS";
 
-This app is the first of three projects required for Udacity's React Nanodegree program.
-
 This app is the first of three projects required to complete the Udacity's React Nanodegree program.
 
-- LIVE DEMO: https://my-reads-shelf-react-app.netlify.app/
+## Live Demo
+
+https://my-reads-shelf-react-app.netlify.app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
