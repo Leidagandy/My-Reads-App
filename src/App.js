@@ -9,24 +9,43 @@ import "./App.css";
 class BooksApp extends React.Component {
   state = {
     books: [],
+    error: false,
   };
 
   componentDidMount() {
-    BooksAPI.getAll().then((books) => {
-      this.setState({ books: books });
-    });
+    BooksAPI.getAll()
+      .then((books) => {
+        this.setState({ books: books });
+      })
+      .catch((err) => {
+        console.log(err);
+        this.setState({ error: true });
+      });
   }
 
   moveShelf = (book, shelf) => {
-    BooksAPI.update(book, shelf);
-
-    BooksAPI.getAll().then((books) => {
-      this.setState({ books: books });
+    BooksAPI.update(book, shelf).catch((error) => {
+      console.log(error);
+      this.setState({ error: true });
     });
+
+    if (shelf === "none") {
+      this.setState((prevState) => ({
+        books: prevState.books.filter((b) => b.id !== book.id),
+      }));
+    } else {
+      book.shelf = shelf;
+      this.setState((prevState) => ({
+        books: prevState.books.filter((b) => b.id !== book.id).concat(book),
+      }));
+    }
   };
 
   render() {
     // console.log(this.state.books);
+    if (this.state.error) {
+      return <div>Network error. Please try again later.</div>;
+    }
     return (
       <div className="app">
         <Route
