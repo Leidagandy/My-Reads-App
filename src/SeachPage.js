@@ -25,9 +25,9 @@ class SearchPage extends Component {
   };
 
   updateQuery = (query) => {
-    this.setState({
+    this.setState(() => ({
       query: query,
-    });
+    }));
     this.updateSearchedBooks(query);
   };
 
@@ -56,7 +56,7 @@ class SearchPage extends Component {
             <input
               type="text"
               placeholder="Search by title or author"
-              value={this.state.query}
+              value={this.state.query.trimStart()}
               onChange={(event) => this.updateQuery(event.target.value)}
             />
           </div>
