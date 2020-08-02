@@ -1,6 +1,6 @@
 import React from "react";
 
-function Book(props) {
+const Book = ({ book, currentShelf, moveShelf }) => {
   return (
     <div className="book">
       <div className="book-top">
@@ -10,16 +10,16 @@ function Book(props) {
             width: 128,
             height: 193,
             backgroundImage: `url(${
-              props.book.imageLinks && props.book.imageLinks.thumbnail
+              book.imageLinks
+                ? book.imageLinks.thumbnail
+                : "icons/book-placeholder.svg"
             })`,
           }}
         ></div>
         <div className="book-shelf-changer">
           <select
-            onChange={(event) =>
-              props.moveShelf(props.book, event.target.value)
-            }
-            value={props.currentShelf}
+            onChange={(event) => moveShelf(book, event.target.value)}
+            value={currentShelf}
           >
             <option value="move" disabled>
               Move to...
@@ -31,10 +31,14 @@ function Book(props) {
           </select>
         </div>
       </div>
-      <div className="book-title">{props.book.title}</div>
-      <div className="book-authors">{props.book.authors}</div>
+      <div className="book-title">
+        {book.title ? book.title : "Title unavailable"}
+      </div>
+      <div className="book-authors">
+        {book.authors ? book.authors : "Author name unavailable"}
+      </div>
     </div>
   );
-}
+};
 
 export default Book;
