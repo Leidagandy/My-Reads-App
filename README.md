@@ -1,4 +1,40 @@
+## MyReads
+
+Made with React and React Router
+
+MyReads is a book catalogue app that allows the user to search for books and place them in one of three shelves or categories:
+
+    - Currently Reading
+    - Want to Read
+    - Read
+
+It allows users to search for books based on the following titles and authors:
+
+"Android", "Art", "Artificial Intelligence", "Astronomy", "Austen",
+"Baseball", "Basketball", "Bhagat", "Biography", "Brief", "Business",
+"Camus", "Cervantes", "Christie", "Classics", "Comics", "Cook", "Cricket", "Cycling",
+"Desai", "Design", "Development", "Digital Marketing", "Drama", "Drawing","Dumas",
+"Education", "Everything", "Fantasy", "Film", "Finance", "First", "Fitness", "Football", "Future","Games", "Gandhi", "Homer","Horror", "Hugo",
+"Ibsen", "JavaScript", "Journey", "Kafka", "King", "Lahiri", "Larsson", "Learn", "Literary Fiction", "Make", "Manage", "Marquez", "Money", "Mystery", "Negotiate",
+"Painting", "Philosophy", "Photography", "Poetry", "Production", "Programming",
+"React", "Redux", "River", "Robotics", "Rowling",
+"Satire", "Science Fiction", "Shakespeare", "Singh", "Swimming", "Tale", "Thrun", "Time", "Tolstoy", "Travel","Ultimate", "Virtual Reality", "Web Development", "iOS";
+
+This app is the first of three projects required for Udacity's React Nanodegree program.
+
+This app is the first of three projects required to complete the Udacity's React Nanodegree program.
+
+- LIVE DEMO: https://my-reads-shelf-react-app.netlify.app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Instalation
+
+Clone the repository, change directories, and use NPM to install the dependencies.
+
+$ git clone https://github.com/Leidagandy/My-Reads-App.git
+$ cd reactnd-project-myreads
+\$ npm install
 
 ## Available Scripts
 
