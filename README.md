@@ -1,12 +1,12 @@
-## MyReads : A Book Catalogue App
+## MyReads : A Book Finder App
 
-Made with React and React Router, MyReads allows you to select books and place them in one of three shelves or categories:
+MyReads allow users to search for books by entering a query (Title, Author, etc) and displays the resulting books in a list on the page with all the corresponding data. Books can then be placed in one of three shelves or categories:
 
     - Currently Reading
     - Want to Read
     - Read
 
-You can search for books based on the following titles and authors:
+Users can search for books based on the following terms:
 
 "Android", "Art", "Artificial Intelligence", "Astronomy", "Austen",
 "Baseball", "Basketball", "Bhagat", "Biography", "Brief", "Business",
@@ -30,8 +30,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Clone the repository, change directories, and use NPM to install the dependencies.
 
-$ git clone https://github.com/Leidagandy/My-Reads-App.git
-$ cd reactnd-project-myreads
+\$ git clone https://github.com/Leidagandy/My-Reads-App.git
+
+\$ cd reactnd-project-myreads
+
 \$ npm install
 
 ## Available Scripts
